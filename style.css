@@ -13,7 +13,7 @@
     --color-blue: #73aace;
     --color-yellow: #fff7d1;
     --color-orange: #feb546;
-    --color-black: #000000;
+    --color-black: #111111;
   
     /* Font size */
     --font-large: 48px;
@@ -29,6 +29,9 @@
 
     /* size */
     --size-border-radius: 4px;
+
+    /* animation */
+    --anmiation-duration: 300ms;
   }
   
   /* Univarsal Tags */
@@ -48,8 +51,18 @@
   }
 
   ul {
-      list-style: none;
       padding-left: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  button {
+      background-color: transparent;
+      cursor: pointer;
+      border: none;
+      outline: none;
   }
 
   /* Typography */
@@ -112,4 +125,106 @@
 
   .navbar__menu__item:hover {
       background-color: var(--color-dark-pink);
+  }
+
+  /* Home */
+  #home {
+      background-color: #C4EEDE;
+      padding: 40px 0px;
+      text-align: center;
+  }
+
+  .home__avatar {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      border: 2px solid var(--color-light-white);
+  }
+
+  .home__description {
+      background-color: #111111;
+      color: #C4EEDE;
+      padding: 10px 0px;
+      letter-spacing: 4px;
+      font-weight: 300;
+  }
+
+  .home__contact {
+      font-size: var(--font-regular);
+      font-weight: var(--weight-bold);
+      margin: 24px;
+      padding: 8px 12px;
+      border: 2px solid var(--color-white);
+      border-radius: var(--size-border-radius);
+      color: var(--color-white);
+  }
+
+  /* Section common */
+  .section {
+      padding: 50px;
+      text-align: center;
+      max-width: 1200px;
+      margin: auto;
+  }
+
+  /* About */
+  .about__majors {
+      display: flex;
+      justify-content: space-between;
+      margin: 80px 0;
+  }
+
+  .major__icon {
+      width: 170px;
+      height: 170px;
+      line-height: 170px;
+      font-size: 70px;
+      margin: auto;
+      color: var(--color-blue);
+      border: 1px solid var(--color-blue);
+      border-radius: 50%;
+      margin-bottom: 16px;
+  }
+
+  .major__icon i {
+      transition: all var(--anmiation-duration) ease;
+  }
+
+  .major__icon:hover i{
+      color: var(--color-pink);
+      transform: rotate(-30deg) scale(1.1);
+  }
+
+  .major__title, .major__description {
+      color: var(--color-dark-grey);
+  }
+
+  .major__description {
+      font-size: var(--font-small);
+  }
+
+  .edu {
+      display: flex;
+      align-items: center;
+  }
+
+  .edu__logo {
+      width: 64px;
+  }
+
+  .edu__description {
+      margin: 0 16px;
+      text-align: left;
+  }
+
+  .edu__name, .edu__period {
+      color: var(--color-light-grey);
+  }
+
+  .edu__name {
+      font-size: var(--font-small);
+  }
+
+  .edu__period {
+      font-size: var(--font-micro);
   }

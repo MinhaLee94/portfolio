@@ -9,7 +9,7 @@
         <link rel="icon" type="image/png" href="imgs/kiwi.png" />
         <script src="https://kit.fontawesome.com/d620e8ba14.js" 
         crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
         rel="stylesheet"
         />
         <link rel="stylesheet" href="style.css" />
@@ -42,12 +42,12 @@
             class="home__avatar"
             />
             <h1 class="home__title">Hello, <br /> I'm Minha</h1>
-            <h2 class="home__description">Hard worker with a pot of passion</h2>
+            <div class="home__description">Hard worker with a pot of passion</div>
             <button class="home__contact">CONTACT ME</button>
         </section>
 
         <!-- About -->
-        <section id="about">
+        <section id="about" class="section">
             <h1>About me</h1>
             <p>
                 I'm currently undergraduate student in Hunter College,NY.
@@ -59,7 +59,7 @@
                     <div class="major__icon">
                         <i class="fab fa-js"></i>
                     </div>
-                    <div class="major__title">Front-end</div>
+                    <h2 class="major__title">Front-end</h2>
                     <p class="major__description">
                         HTML, CSS, Javascript,<br>
                         TypeScript, React</p>
@@ -68,7 +68,7 @@
                     <div class="major__icon">
                         <i class="fab fa-python"></i>
                     </div>
-                    <div class="major__title">Data Science</div>
+                    <h2 class="major__title">Data Science</h2>
                     <p class="major__description">
                         Python, Webscrapper</p>
                 </div>
@@ -76,7 +76,7 @@
                     <div class="major__icon">
                         <i class="fas fa-server"></i>
                     </div>
-                    <div class="major__title">Back-end</div>
+                    <h2 class="major__title">Back-end</h2>
                     <p class="major__description">
                         C, C++, Rust</p>
                 </div>
@@ -84,19 +84,23 @@
             <div class="about__edu">
                 <div class="edu">
                     <img src="/imgs/LAGCC logo.png" class="edu__logo">
-                    <p class="edu__name">Graduated from LAGCC</p>
-                    <p class="edu__period">2016 ~ 2018 </p>
+                    <div class="edu__description">
+                        <p class="edu__name">Graduated from LAGCC</p>
+                        <p class="edu__period">2016 ~ 2018 </p>
+                    </div>
                 </div>
                 <div class="edu">
                     <img src="/imgs/Hunter logo.png" class="edu__logo">
-                    <p class="edu__name">Attending Hunter College</p>
-                    <p class="edu__period">2018 ~ until now, majored in Computer Science</p>
+                    <div class="edu__description">
+                        <p class="edu__name">Attending Hunter College</p>
+                        <p class="edu__period">2018 ~ until now, majored in Computer Science</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Skills -->
-        <section id="skills">
+        <section id="skills" class="section">
             <h1>Skills</h1>
             <h2>Skills & Attributes</h2>
             <p>blah blah</p>
@@ -171,7 +175,7 @@
         </section>
 
         <!-- Work -->
-        <section id="work">
+        <section id="work" class="section">
             <h1>My Work</h1>
             <h3>Projects</h3>
             <div class="work__categories">
@@ -204,7 +208,7 @@
         </section>
 
         <!-- Testimonials -->
-        <section class="testimonials">
+        <section class="testimonials" class="section">
             <h1>Testimonials</h1>
             <h3>See What they say about me</h3>
             <div class="testimonials">
@@ -226,7 +230,7 @@
         </section>
 
         <!-- Contact -->
-        <section class="contact">
+        <section class="contact" class="section">
             <h1 class="contact__title">Let's talk</h1>
             <h2 class="contact__email">shjung1994@gmail.com</h2>
             <div class="contact__links">
