@@ -97,12 +97,19 @@
 
 /* Navbar */
 #navbar {
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: #a8dbc7;
+    background-color: transparent;
     align-items: center;
     color: var(--color-white);
     padding: 16px;
+    transition: all var(--anmiation-duration) ease-in-out;
+}
+#navbar.navbar--dark {
+    background-color: #a8dbc7;
+    padding: 8px;
 }
 
 .navbar__menu {
@@ -129,7 +136,7 @@ font-weight: var(--weight-semi-bold);
 
 .navbar__toggle-btn {
     position: absolute;
-    top: 20px;
+    top: 14px;
     right: 32px;
     font-size: 24px;
     color: var(--color-white);
@@ -140,6 +147,7 @@ font-weight: var(--weight-semi-bold);
 #home {
     background-color: #C4EEDE;
     padding: 40px 0px;
+    padding-top: 120px;
     text-align: center;
 }
 
