@@ -377,6 +377,13 @@ background-color: var(--color-grey);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    opacity: 1;
+    transition: all var(--anmiation-duration) ease-in;
+}
+
+.work__projects.anim-out {
+    opacity: 0;
+    transform: scale(0.96) translateY(40px);
 }
 
 .project {
@@ -388,6 +395,11 @@ background-color: var(--color-grey);
     height: 250px;
     margin: 2px;
     background-color: var(--color-light-white);
+    transition: all var(--anmiation-duration) ease-out;
+}
+
+.project.invisible {
+    display: none;
 }
 
 .project__img {

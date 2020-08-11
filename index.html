@@ -192,28 +192,53 @@
                 <h1>My Work</h1>
                 <h3>Projects</h3>
                 <div class="work__categories">
-                    <button class="category__btn">
+                    <button class="category__btn" data-category="*">
                         All<span class="category__count">8</span>
                     </button>
-                    <button class="category__btn">
+                    <button class="category__btn" data-category="front-end">
                         Front<span class="category__count">3</span>
                     </button>
-                    <button class="category__btn">
+                    <button class="category__btn" data-category="back-end">
                         Back<span class="category__count">3</span>
                     </button>
-                    <button class="category__btn">
+                    <button class="category__btn" data-category="mobile">
                         Mobile<span class="category__count">2</span>
                     </button>
                 </div>
                 <div class="work__projects">
-                    <a 
-                    href="url" 
-                    class="project" 
-                    target="blank"
-                    >
+                <a 
+                href="url" 
+                class="project" 
+                target="blank"
+                data-category="front-end"
+                >
                     <img class="project__img" src="screenshot" alt="">
                     <div class="project__description">
-                        <h3>title</h3>
+                        <h3>front-end</h3>
+                        <span>description</span>
+                    </div>
+                </a>
+                <a 
+                href="url" 
+                class="project" 
+                target="blank"
+                data-category="back-end"
+                >
+                    <img class="project__img" src="screenshot" alt="">
+                    <div class="project__description">
+                        <h3>back-end</h3>
+                        <span>description</span>
+                    </div>
+                </a>
+                <a 
+                href="url" 
+                class="project" 
+                target="blank"
+                data-category="mobile"
+                >
+                    <img class="project__img" src="screenshot" alt="">
+                    <div class="project__description">
+                        <h3>mobile</h3>
                         <span>description</span>
                     </div>
                 </a>
@@ -261,7 +286,7 @@
                 2020 Minha's web portfolio - All rights reserved
             </p>
         </section>
-        
+
         <!-- Arrow button -->
         <button class="arrow-up">
             <i class="fas fa-arrow-up"></i>

@@ -50,3 +50,27 @@ document.addEventListener('scroll', () => {
 arrowBtn.addEventListener('click', () => {
     scrollIntoView('#home');
 });
+
+// work filtering, have four categories which are all, front-end, back-end, mobile
+// animation effect when uploading filtered contents, scaling to 1 and bottom to top
+const categories = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+categories.addEventListener('click', () => {
+    const target = event.target.dataset.category;
+    if(target == null){
+        return;
+    }
+
+    projectContainer.classList.add('anim-out');
+    setTimeout(() => {
+        for (let project of projects){
+            if(target == "*" || project.dataset.category == target){
+                project.classList.remove('invisible');
+            } else {
+                project.classList.add('invisible');
+            }
+        }
+        projectContainer.classList.remove('anim-out');
+    }, 300);
+});
