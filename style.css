@@ -144,6 +144,25 @@ font-weight: var(--weight-semi-bold);
     display: none;
 }
 
+.arrow-up {
+    position: fixed;
+    background-color: #a8dbc7;
+    color: var(--color-white);
+    border-radius: 50%;
+    font-size: 40px;
+    bottom: 64px;
+    right: 32px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all var(--anmiation-duration) ease-in;
+}
+
+.arrow-up.visible {
+    opacity: 1;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
 /* Home */
 #home {
     background-color: #C4EEDE;

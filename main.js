@@ -30,3 +30,23 @@ function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({ behavior: 'smooth' });
 }
+
+// fading home contetns when scrolling down
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+    home.style.opacity = 1-window.scrollY / homeHeight;
+});
+
+const arrowBtn = document.querySelector('.arrow-up');
+document.addEventListener('scroll', () => {
+    if(window.scrollY > homeHeight / 2){
+        arrowBtn.classList.add('visible');
+    } else {
+        arrowBtn.classList.remove('visible');
+    }
+});
+
+arrowBtn.addEventListener('click', () => {
+    scrollIntoView('#home');
+});
