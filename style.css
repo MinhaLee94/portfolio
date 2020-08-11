@@ -182,6 +182,7 @@ font-weight: var(--weight-semi-bold);
     padding: 10px 0px;
     letter-spacing: 4px;
     font-weight: 300;
+    font-size: var(--font-small);
 }
 
 .home__contact {
@@ -192,6 +193,10 @@ font-weight: var(--weight-semi-bold);
     border: 2px solid var(--color-white);
     border-radius: var(--size-border-radius);
     color: var(--color-white);
+}
+
+home__contact:hover {
+    background-color: #a8dbc7;
 }
 
 /* Section common */
@@ -342,6 +347,7 @@ background-color: var(--color-grey);
     border-radius: var(--size-border-radius);
     font-size: var(--font-regular);
     padding: 8px 48px;
+    position: relative;
 }
 
 .category__btn.selected,
@@ -364,9 +370,9 @@ background-color: var(--color-grey);
     height: 24px;
     display: inline-block;
     line-height: 24px;
-    position: relative;
+    position: absolute;
     top: -20px;
-    left: 4px;
+    right: 16px;
     opacity: 0;
     transition: all var(--anmiation-duration) ease-in;
 }
@@ -511,8 +517,20 @@ background-color: var(--color-grey);
 
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
+    :root {
+         /* Font size */
+        --font-large: 30px;
+        --font-medium: 18px;
+        --font-regular: 16px;
+        --font-small: 14px;
+        --font-micro: 12px;
+    }
+
     .navbar__toggle-btn {
         display: block;
+        top: 16px;
+        right: 16px;
+        font-size: var(--font-medium);
     }
 
     #navbar {
@@ -536,15 +554,27 @@ background-color: var(--color-grey);
         display: block;
     }
 
+    .section {
+        padding: 16px;
+        padding-top: 40px;
+    }
+
     .about__majors {
         flex-direction: column;
+        margin-top: 30px;
+        margin-bottom: 0;
     }
     .major {
-        margin-bottom: 38px;
+        margin-bottom: 30px;
     }
 
     .skillset {
         flex-direction: column;
+    }
+
+    .category__btn {
+        margin: 4px 0;
+        width: 100%;
     }
 
     .project {
@@ -552,7 +582,30 @@ background-color: var(--color-grey);
     }
 
     .testimonial__avatar {
-        width: 80px;
-        height: 80px;
+        width: 120px;
+        height: 120px;
+    }
+
+    .testimonial {
+        flex-direction: column;
+        align-items: center;
+    }
+    .testimonial__avatar:nth-child(odd),
+    .testimonial__avatar:nth-child(even){
+        margin: 0;
+        margin-bottom: 8px;
+    }
+
+    .testimonial__speech-bubble {
+        order: 1;
+    }
+
+    .arrow-up {
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+        bottom: 16px;
+        right: 16px;
+        line-height: 50px;
     }
 }
