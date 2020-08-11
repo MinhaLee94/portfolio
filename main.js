@@ -9,6 +9,7 @@ document.addEventListener('scroll', () => {
     } else {
         navbar.classList.remove('navbar--dark');
     }
+    navbarMenu.classList.remove('menu-on');
 });
 
 const navbarMenu = document.querySelector('.navbar__menu');
@@ -78,4 +79,9 @@ categories.addEventListener('click', () => {
         }
         projectContainer.classList.remove('anim-out');
     }, 300);
+});
+
+const toggleBtn = document.querySelector('.navbar__toggle-btn');
+toggleBtn.addEventListener('click', () => {
+    navbarMenu.classList.toggle('menu-on');
 });
